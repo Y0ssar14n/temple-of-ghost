@@ -35,3 +35,8 @@ Investigated other webpages for inspiration.
 Created content skeleton & styles.
 Initialized git repository & connected to GitHub.
 Set up README!
+
+- 4.8.22 PLUNDERING
+Added basic test images & sounds.
+Plundered other HTML files for code & curious tags.
+Still in this phase--need to investigate graphically to find more utility.

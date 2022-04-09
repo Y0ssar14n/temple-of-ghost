@@ -1,6 +1,18 @@
+html, body {
+    cursor: url("images/cursor.ico"), default;
+}
+
 body {
+  background-image: url("images/bg.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #194D33;
   color: #FFFFFF;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
 }
 
 h1 {
@@ -17,3 +29,5 @@ h1 {
   text-align: center;
   box-shadow: black 0px 5px 10px;
 }
+
+
