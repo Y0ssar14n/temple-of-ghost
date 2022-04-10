@@ -40,3 +40,12 @@ Set up README!
 Added basic test images & sounds.
 Plundered other HTML files for code & curious tags.
 Still in this phase--need to investigate graphically to find more utility.
+
+- 4.9.22 REORG
+Completed draft of page content.
+Reorganized content into separate divs/boxes.
+Organized CSS selectors & made stylesheet basically usable.
+Added basic input system.
+Added basic "offering" display.
+Needs additional styles.
+Needs additional functionality & scripting for "sacrifice" functionality.
