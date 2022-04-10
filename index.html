@@ -4,7 +4,7 @@
 <head>
   <title>Temple of Ghost</title>
   <link rel="stylesheet" href="styles.css"/>
-  <!-- favicon -->
+  <!-- favicon below -->
   <link rel="icon" type="image/png" href="images/skull-icon.png" sizes="64x64">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -12,61 +12,71 @@
 
 <body>
 
-  <div class="main">
-  
-    <div class="head">
-      <h1>TEMPLE OF GHOST</h1>
-      
-      <hr width="300px">
-      
-      <br>
-      
-      <div class="location">
-        <marquee behavior="scroll" direction="left" scrolldelay="0">
-          <p>New location discovered.</p>
-        </marquee>
-      </div>
-      
+  <!-- begin header -->
+  <div class="box">
+    <h1>TEMPLE OF GHOST</h1>
+    <hr width="300px">
+    <br>
+    
+    <div class="location">
+      <marquee behavior="scroll" direction="left" scrolldelay="0">
+        <p>New location discovered.</p>
+      </marquee>
     </div>
     
   </div>
     
-  <br>
   
-  <div class="explain">
-    <p>You have discovered the venerated Temple of Ghost.</p>
-    <p>Your long and difficult journey is at an end.</p>
-    <p>By calling on the old spirits, you may leave an offering in the temple.</p>
-    <p>Be careful lest this offering displease the spirits.</p>
-    <p>A very good offering will curry the favor of the spirits.</p>
-    <p>Peruse the offerings of those who came before; rest and heal thyself, wanderer.</p>
-  </div>
-    
-  <div class="offering">
+  <!-- begin explanation text -->
+  <div class="box">
+    <p>You have discovered the venerated Temple of Ghost. 
+    Your long and difficult journey is at an end. 
+    By calling on the old spirits, you may leave an offering in the temple.
+    Be careful lest this offering displease the spirits. 
+    A very good offering will curry the favor of the spirits. 
     <br>
+    <br>
+    Peruse the offerings of those who came before; rest and heal thyself, wanderer.</p>
+  </div>
+  
+  <!-- begin functionality -->  
+  <div class="box">
+  
+    <p>Most recent wanderer's offering.</p>
+    
+    <div id="view">
+      <img id="offering" src="images/skull-icon.png">
+    </div>
+    <br>
+    
+  </div>
+  
+  <div class="box">
+  
     <p>Leave an offering.</p>
-    <br>
-    <p>View most recent offering.</p>
-    <br>
-  </div>
     
+    <!-- passes input text to an external .php file.
+         possible to use Javascript as the "action" attribute here?
+         Just send the input to a <script> or /app.js that
+         reaches into the src attribute of id=offering? -->
 
+    <form action="/offering.php">
+      <label for="fname">Offering:</label>
+      <input type="text" id="fname" name="fname">
+      <input type="submit" value="Sacrifice">
+    </form>
+    <br>
+    
+  </div>
   
+  <!-- begin footer links -->  
   <br>
   <br>
-  <br>
-  <center><img width="10%" src="images/skull.png"></center>
-  <!-- what does the "loading" attribute do?
-    <img class="demo" loading="lazy" src="./substack.net_files/palmdrive.jpg">
-   -->
-  <br>
-  <br>
-  <br>
-  
-  <div id="footer"> 
-    <center><a href="www.google.com">exit the temple</a></center>
+  <div class="footer"> 
+    <a href="http://www.google.com">exit the temple</a>
   </div>
    
+  <!-- begin audio autoplay & iframes -->    
   <audio autoplay loop="on" volume="0.01">
     <source src="sounds/re_dead-aim_save-room.ogg" type="audio/ogg">
     Your browser doesn't support this sound.

@@ -1,5 +1,6 @@
 html, body {
     cursor: url("images/cursor.ico"), default;
+    /* This changes the cursor to the selected image. */
 }
 
 body {
@@ -9,25 +10,42 @@ body {
   background-size: cover;
   background-color: #194D33;
   color: #FFFFFF;
-  font-family: 'Helvetica';
+  text-align: center;
+  /* font-family: 'Helvetica';
   font-style: normal;
   font-weight: 400;
-  font-stretch: 100%;
+  font-stretch: 100%; */
+}
+
+p {
+  padding:25px;
+  /* text-align: justify; */
 }
 
 h1 {
   padding-top: 25px;
 }
 
-.main {
+.box {
   height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
-  background-color: #C2921F;
+  background-color: #000000;
+  /*background-image: url("images/bg.gif");
+   width: 50%; */
   width: 350px;
-  text-align: center;
   box-shadow: black 0px 5px 10px;
 }
 
+.location {}
 
+.footer {}
+
+#view {
+  background-color: #FFFFFF;
+  margin: auto;
+  width: 50%;
+  border: 3px solid red;
+  padding:20px;
+}
