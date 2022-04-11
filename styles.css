@@ -1,29 +1,75 @@
-html, body {
-    cursor: url("images/cursor.ico"), default;
-    /* This changes the cursor to the selected image. */
-}
+@font-face { font-family: NES; src: url("nes.ttf"); }
 
-body {
-  background-image: url("images/bg.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #194D33;
+html, body {
+  cursor: url("images/cursor.ico"), default;
+  font-family: NES;
+  background-color: #000000;
   color: #FFFFFF;
   text-align: center;
-  /* font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%; */
+  text-shadow: black 2px 2px 0px;
 }
 
 p {
-  padding:25px;
-  /* text-align: justify; */
+  margin: 2em;
+  text-align: justify;
 }
 
-h1 {
-  padding-top: 25px;
+span {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+marquee {
+  margin: 1em;
+  
+}
+
+button {
+  margin: 1em;
+  padding: 10px;
+  border: 1px red;
+  background-image: linear-gradient(#bf2222,#921c1c);
+  text-shadow: black 2px 0px 0px;
+  color: #FFFFFF;
+  font-family: NES;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-image: linear-gradient(#cf3535,#dc5b5b);
+}
+
+hr {
+  margin: auto;
+}
+
+td, th {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.header {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 350px;
+}
+
+.sidebar {
+  height: auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: auto;
+  border-style: ridge;
+  border: 3px solid white;
+  background-image: linear-gradient(#616fec,#090974);
+  border-radius: 5px;
+  float:left;
+  background-attachment: local;
+  position: fixed;
 }
 
 .box {
@@ -31,21 +77,48 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
-  background-color: #000000;
-  /*background-image: url("images/bg.gif");
-   width: 50%; */
   width: 350px;
-  box-shadow: black 0px 5px 10px;
+  border-style: ridge;
+  border: 3px solid white;
+  background-image: linear-gradient(#616fec,#090974);
+  border-radius: 5px;
 }
 
-.location {}
+.avatar-container {
+  padding: 10px;
+  margin: 1em;
+  background-color: #000000;
+}
 
-.footer {}
+.marquee-img {
+  width:25px;
+}
+
+.td-right {
+  text-align:right;
+}
+
+#avatar {
+  margin: 1em;
+}
+
+#header {
+ width: 350px;
+ padding-top: 50px; 
+}
 
 #view {
-  background-color: #FFFFFF;
   margin: auto;
   width: 50%;
-  border: 3px solid red;
+  border: 3px solid white;
   padding:20px;
+}
+
+#offering {
+  margin: 2em;
+}
+
+#footer {
+  color: #FFFFFF;
+  text-decoration: none;
 }

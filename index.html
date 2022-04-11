@@ -5,106 +5,131 @@
   <title>Temple of Ghost</title>
   <link rel="stylesheet" href="styles.css"/>
   <!-- favicon below -->
-  <link rel="icon" type="image/png" href="images/skull-icon.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="images/Grave.gif" sizes="64x64">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 
 <body>
 
-  <!-- begin header -->
+  <!-- sidebar -->
+  <div class="sidebar">
+    <table style="text-align:left; margin:5px;">
+      <tr>
+        <td rowspan="6" style="background-color:#000000; margin: 5px;">
+          <img id="avatar" src="images/avatar.gif">
+        </td>
+      </tr>
+      <th colspan="2">Wanderer</th>
+      <tr>
+        <td>LV</td>
+        <td class="td-right">9</td>
+      <tr>
+        <td>HP</td>
+        <td id="HP" class="td-right">7/35</td>
+      </tr>
+      <tr>
+        <td>MP</td>
+        <td class="td-right">0/0</td>
+      </tr>
+      <tr>
+        <td>Gil</td>
+        <td class="td-right">400</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="main">
+  
+  <!-- header -->
+  <div class="header">
+    <img id="header" src="images/header.png">
+  </div>
   <div class="box">
-    <h1>TEMPLE OF GHOST</h1>
-    <hr width="300px">
-    <br>
-    
     <div class="location">
       <marquee behavior="scroll" direction="left" scrolldelay="0">
-        <p>New location discovered.</p>
+        <table>
+          <tr>
+            <td><img style="float:left;" class="marquee-img" src="images/Exclamation.gif"></td>
+            <td><span>New location discovered.</span></td>
+            <td><img style="float:right;" class="marquee-img" src="images/Exclamation.gif"></td>
+          </tr>
+        </table>
       </marquee>
+      <hr width="300px">
+      <p>Ghost Lair - 5F</p>
     </div>
-    
   </div>
     
-  
-  <!-- begin explanation text -->
+  <!-- explanation text -->
   <div class="box">
-    <p>You have discovered the venerated Temple of Ghost. 
+    <p id="paragraph">You have discovered the venerated Temple of Ghost. 
     Your long and difficult journey is at an end. 
     By calling on the old spirits, you may leave an offering in the temple.
     Be careful lest this offering displease the spirits. 
-    A very good offering will curry the favor of the spirits. 
-    <br>
-    <br>
-    Peruse the offerings of those who came before; rest and heal thyself, wanderer.</p>
+    A very good offering may curry their favor. 
+    </p>
   </div>
   
   <!-- begin functionality -->  
   <div class="box">
-  
-    <p>Most recent wanderer's offering.</p>
-    
-    <div id="view">
-      <img id="offering" src="images/skull-icon.png">
+    <div id="altar">
+      <p id="altar" style="text-align:center;">An altar looms before you.</p>
+    </div>
+    <div id="view" style="background-image: url('images/bg.gif');">
+      <img id="offering" src="images/altar.gif">
     </div>
     <br>
-    
-  </div>
-  
-  <div class="box">
-  
-    <p>Leave an offering.</p>
-    
-    <!-- passes input text to an external .php file.
-         possible to use Javascript as the "action" attribute here?
-         Just send the input to a <script> or /app.js that
-         reaches into the src attribute of id=offering? -->
-
-    <form action="/offering.php">
-      <label for="fname">Offering:</label>
-      <input type="text" id="fname" name="fname">
-      <input type="submit" value="Sacrifice">
-    </form>
+    <div id="button">
+      <button onclick="setOffering()">S A C R I F I C E</button>
+    </div>
+    <script>
+      function setOffering() {
+        let text = prompt("name your innermost desire","we will know its value");
+        console.log("Text: " + text + " Length: " + text.length)
+        if (text.length <= 16) {
+          alert("...is that all? A pity.");
+          document.getElementById("offering").setAttribute("src", "images/Darkness.gif");
+          document.getElementById("avatar").setAttribute("src", "images/Dead.gif");
+          document.getElementById("paragraph").innerHTML = "The altar exudes an ominous thrum. The spirits have been aroused--perhaps you should leave this place.";
+          document.getElementById("HP").innerHTML = "0/35";
+        }
+        else {
+          alert("Hm. Yes, we see it. We like it.");
+          document.getElementById("offering").setAttribute("src", "images/LightCrystal.gif");
+          document.getElementById("HP").innerHTML = "35/35";
+          document.getElementById("paragraph").innerHTML = "The temple booms with a single peal from a far-off bell, and blood begins to seep from crevices in the altar. You have done well. Rest here awhile before venturing on.";
+        }
+        document.getElementById("altar").innerHTML = "<br><br>";  
+        document.getElementById("button").innerHTML = "";
+        document.getElementById("view").setAttribute("style","background-color:#000000;");
+      }
+    </script>
     <br>
-    
   </div>
   
-  <!-- begin footer links -->  
+  <!-- footer -->  
+  
+  <br>
+  <br>
+  <br>
   <br>
   <br>
   <div class="footer"> 
-    <a href="http://www.google.com">exit the temple</a>
+    <a id="footer" href="https://github.com/Y0ssar14n/temple-of-ghost">Y o s s a r i a n &nbsp made &nbsp this</a>
   </div>
-   
-  <!-- begin audio autoplay & iframes -->    
+  <br>
+  <br>
+  
+  <!-- main container end -->
+  </div>
+  
+  <!-- audio autoplay & iframes -->    
   <audio autoplay loop="on" volume="0.01">
     <source src="sounds/re_dead-aim_save-room.ogg" type="audio/ogg">
-    Your browser doesn't support this sound.
   </audio>
   
   <iframe allowfullscreen="" src="" id="" style="display: none;">
-  
-  <!-- Don't forget you can organize things in 
-    <span>
-    <section>
-    <li>
-      <ul>
-      <ol>
-    <table>
-  -->
-  
-  <!-- basic styles
-    <b> / <strong>
-    <i>
-    <u>
-  -->
-
-  <!--  
-    <pr> ??
-    <font>
-    <map>
-    <area>
-    -->  
 
 </body>
 

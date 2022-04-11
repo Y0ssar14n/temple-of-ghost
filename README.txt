@@ -49,3 +49,10 @@ Added basic input system.
 Added basic "offering" display.
 Needs additional styles.
 Needs additional functionality & scripting for "sacrifice" functionality.
+
+- 4.10.22 STYLES
+Full JS functionality implemented.
+Compromised somewhat on interactivity to finish in a timely fashion.
+Massive redesign: styles & images applied.
+Decided to basically follow FF1 aesthetic.
+Included sidebar.
