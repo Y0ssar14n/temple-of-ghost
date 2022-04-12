@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="images/Grave.gif" sizes="64x64">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" contet="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -73,7 +74,7 @@
   
   <!-- begin functionality -->  
   <div class="box">
-    <div id="altar">
+    <div>
       <p id="altar" style="text-align:center;">An altar looms before you.</p>
     </div>
     <div id="view" style="background-image: url('images/bg.gif');">
@@ -85,9 +86,9 @@
     </div>
     <script>
       function setOffering() {
-        let text = prompt("name your innermost desire","we will know its value");
+        var text = prompt("name your innermost desire","we will know its value");
         console.log("Text: " + text + " Length: " + text.length)
-        if (text.length <= 16) {
+        if (text.length <= 32) {
           alert("...is that all? A pity.");
           document.getElementById("offering").setAttribute("src", "images/Darkness.gif");
           document.getElementById("avatar").setAttribute("src", "images/Dead.gif");
@@ -100,8 +101,8 @@
           document.getElementById("HP").innerHTML = "35/35";
           document.getElementById("paragraph").innerHTML = "The temple booms with a single peal from a far-off bell, and blood begins to seep from crevices in the altar. You have done well. Rest here awhile before venturing on.";
         }
-        document.getElementById("altar").innerHTML = "<br><br>";  
-        document.getElementById("button").innerHTML = "";
+        document.getElementById("altar").innerHTML = null;  
+        document.getElementById("button").innerHTML = null;
         document.getElementById("view").setAttribute("style","background-color:#000000;");
       }
     </script>

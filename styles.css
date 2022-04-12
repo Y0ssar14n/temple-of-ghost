@@ -56,6 +56,12 @@ td, th {
   width: 350px;
 }
 
+@media screen and (max-width: 799px) {
+   .sidebar {
+       display:none;
+   }
+}
+
 .sidebar {
   height: auto;
   margin-left: 2em;

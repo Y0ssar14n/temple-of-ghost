@@ -56,3 +56,10 @@ Compromised somewhat on interactivity to finish in a timely fashion.
 Massive redesign: styles & images applied.
 Decided to basically follow FF1 aesthetic.
 Included sidebar.
+
+- 4.11.22 FINALIZATION
+Ensured sidebar disappears when overlapping main content.
+Tweaked script to make sacrifical functionality just a *little* more cryptic & interesting.
+Investigated responsive designs and additional functionality.
+Decided to finalize the project--effectively feature complete.
+Future efforts best spent on new projects.
